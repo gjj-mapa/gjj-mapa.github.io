@@ -1,3 +1,2 @@
-# gjj-mapa.github.io
-A web map
-<meta http-equiv="refresh" content="0; URL=https://gjj-mapa.github.io/main/">
+# An open source detailed mapping of GJJ
+An attempt at creating a web map
