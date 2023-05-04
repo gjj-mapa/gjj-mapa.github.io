@@ -1,2 +1,2 @@
-# gjj-mapa.github.io
- A web map
+# An open source detailed mapping of GJJ
+An attempt at creating a web map
