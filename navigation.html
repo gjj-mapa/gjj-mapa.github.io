@@ -10,5 +10,50 @@
       <p>Wassup</p>
     </dialog>
     <script src="js/grid tonk.js"></script>
+    <script>
+      let lastTouch = null;
+      let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      // Detect if user is on mobile device
+      if (isMobile) {
+      // Add event listeners for touchstart, touchmove, and touchend
+      document.addEventListener('touchstart', onTouchStart);
+      document.addEventListener('touchmove', onTouchMove);
+      document.addEventListener('touchend', onTouchEnd);
+      }
+      else {
+      document.removeEventListener('mousedown', onTouchStart);
+      document.removeEventListener('mousemove', onTouchMove);
+      document.removeEventListener('mouseup', onTouchEnd);
+      }
+      function onTouchStart(e) {
+      // Save the touch event
+      lastTouch = e.touches[0];
+      }
+
+      function onTouchMove(e) {
+      // Calculate the touch position difference
+      let touch = e.touches[0];
+      let deltaX = touch.clientX - lastTouch.clientX;
+      let deltaY = touch.clientY - lastTouch.clientY;
+
+      // Use the transform property to move the page
+      document.body.style.transform += `translate(${deltaX}px, ${deltaY}px)`;
+
+      // Save the last touch event
+      lastTouch = touch;
+
+      // Prevent default scrolling behavior
+      e.preventDefault();
+      }   
+
+      function onTouchEnd(e) {
+        // Reset the last touch event
+        lastTouch = null;
+        
+        // Prevent default scrolling behavior
+        e.preventDefault();
+      }
+    </script>
   </body>
 </html>

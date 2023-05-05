@@ -10,15 +10,19 @@ body{
     pointer-events: all;
     -ms-overflow-style: none; 
     scrollbar-width: none;
-    overflow-y: scroll; 
+    overflow-y: hidden; 
     overflow-x: hidden;
-    
 }
 /* TONK STYLE: */
 .grid {
     display: grid;
     grid-template-columns: repeat(15, 50px);
     grid-template-rows: repeat(15, 50px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center center;
   }
   
   .square {
@@ -32,10 +36,11 @@ button {
 }
 dialog {
     position: relative;
-    border-color: black;
+    border: none;
     top: -100%;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
   }
 a {
     color: lightcyan;
