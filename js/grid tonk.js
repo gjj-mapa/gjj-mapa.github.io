@@ -2,9 +2,14 @@ const grid = document.querySelector('.grid');
 const rowcolumncount = 15;
 let counter = 1;
 let occupiedSquares = [];
+let meSpace = 0;
+let me = null;
+let dialogState = "hidden";
+let dialog = null;
+let enemySpaces = [];
 
 for (let i = 0; i < rowcolumncount*rowcolumncount; i++) {
-    const square = document.createElement("div");
+    const square = document.createElement("button");
     square.classList.add("square");
     
     // Calculate the row and column indices based on the square's position
@@ -61,7 +66,24 @@ function createMe() {
     
     // Select the square at the random index
     const selectedSquare = document.querySelector(`#square${randomNumber}`);
+    const dialog2 = document.querySelector("[dialog-me]");
     
     // Set the background image of the selected square to the tank SVG
     selectedSquare.style.backgroundImage = "url(\"styles/pictures/green tank.svg\")";
+    selectedSquare.appendChild(dialog2);
+    selectedSquare.setAttribute('show-button', '');
+    me = selectedSquare;
+    dialog = dialog2;
 }
+me.addEventListener("click", () => {
+    if (dialogState == "hidden") {
+        dialog.show();
+        dialogState = "shown";
+    }
+    else {
+        dialog.close();
+        dialogState = "hidden";
+    }
+})
+
+

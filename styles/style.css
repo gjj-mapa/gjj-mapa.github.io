@@ -26,98 +26,17 @@ body{
     height: 50px;
     background-image: url("pictures/grid.svg");
 }
-div {
-    fill: white;
-}
-body::-webkit-scrollbar {
-    display: none;
-  }
-body.hide{
-    pointer-events: all;
-    user-select: none;
-    overflow-y: hidden;
-}
-.wrapper{
-    position: absolute;
-    max-width: 480px;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 15px;
-    padding: 40px 30px;
-    transform: translate(-50%, -50%) scale(1.2);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.06);
-    background: #3d3d3d;
-    transition: opacity 0.2s 0s ease-in-out,
-                transform 0.2s 0s ease-in-out;
-}
-.show{
-    opacity: 1;
-    pointer-events: all;
-    transform: translate(-50%, -50%) scale(1);
-}
-.wrapper *{
-    pointer-events: none;
-    opacity: 1;
-    background: #3d3d3d;
-}
-.show *{
-    pointer-events: all;
-    opacity: 1;
-}
-.wrapper .content,
-.content .warn-icon,
-.warn-icon span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.wrapper .content{
-    flex-direction: column;
-}
-.content .warn-icon {
-    height: 115px;
-    width: 115px;
-    border-radius: 50%;
-    background: red;
-}
-.warn-icon span{
-    height: 100px;
-    width: 100px;
-    background: #3d3d3d;
-    border-radius: inherit;
-}
-.warn-icon span i{
-    font-size: 50px;
-    background: red;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.content h2 {
-    margin-top: 35px;
-    font-size: 32px;
-}
-.content p{
-    font-size: 19px;
-    text-align: center;
-    margin-top: 20px;
-}
-.content button{
-    margin-top: 30px;
-    padding: 15px 33px;
-    font-size: 18px;
+button {
+    appearance: none;
     border: none;
-    outline: none;
-    border-radius: 50px;
-    cursor: pointer;
-    background:  #242424;
 }
-.content button:hover{
-    background:  #2e2e2e;
-}
+dialog {
+    position: relative;
+    border-color: black;
+    top: -100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 a {
     color: lightcyan;
 }
