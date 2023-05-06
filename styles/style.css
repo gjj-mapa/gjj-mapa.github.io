@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
     color:#d7d8da;
-    background-color:#242424;
+    background-color:#343541;
     font-family: 'Roboto', sans-serif;
 }
 body{
@@ -37,10 +37,14 @@ button {
 dialog {
     position: relative;
     border: none;
+    border-radius: 10px;
     top: -100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    background-color: #5b6eac;
+  }
+  dialog *{
+    background-color: #5b6eac;
   }
 a {
     color: lightcyan;
