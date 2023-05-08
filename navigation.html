@@ -2,53 +2,26 @@
   <head>
     <title>Tank turn tactics</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body class="body">
     <div class="grid"></div>
-    <dialog dialog-me>
-      <p>Wassup</p>
+    <dialog class="dialog-me">
+      <button id="move-button">
+        Hello World!
+      </button>
+      <button id="move-button">
+        Hello Milky Way!
+      </button>
+      <button id="move-button">
+        Hello Andromeda!
+      </button>
+      <button id="move-button">
+        Hello Space!
+      </button>
     </dialog>
     <script src="js/grid tonk.js"></script>
-    <script>
-      if (isMobile) {
-        // Add event listeners for touchstart, touchmove, and touchend to the grid element
-        grid.addEventListener('touchstart', onTouchStart);
-        grid.addEventListener('touchmove', onTouchMove, {passive: false});
-        grid.addEventListener('touchend', onTouchEnd);
-      } else {
-        // Remove touch event listeners from the grid element if the user is not on a mobile device
-        grid.removeEventListener('touchstart', onTouchStart);
-        grid.removeEventListener('touchmove', onTouchMove);
-        grid.removeEventListener('touchend', onTouchEnd);
-      }
-
-      function onTouchStart(e) {
-        // Save the touch event
-        lastTouch = e.touches[0];
-      }
-
-      function onTouchMove(e) {
-        // Calculate the difference in position between the current touch and the last touch
-        const touch = e.touches[0];
-        const deltaX = touch.clientX - lastTouch.clientX;
-        const deltaY = touch.clientY - lastTouch.clientY;
-      
-        // Scale the grid based on the difference in touch position
-        const scale = Math.max(0.1, Math.min(grid.scale + deltaY * 0.01, 10));
-        grid.style.transform = `translate(-50%, -50%) scale(${scale})`;
-      
-        // Save the current touch for the next touchmove event
-        lastTouch = touch;
-      
-        // Prevent the default behavior of scrolling the page
-        e.preventDefault();
-      }
-
-      function onTouchEnd(e) {
-        // Clear the last touch
-        lastTouch = null;
-      }
-      </script>
+    <script src="js/mobile manager.js"></script>
     </body>
 </html>

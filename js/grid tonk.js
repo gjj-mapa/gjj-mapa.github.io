@@ -21,6 +21,7 @@ for (let i = 0; i < rowcolumncount*rowcolumncount; i++) {
     
     // Update the text content of the square with its number
     square.id = "square" + squareNumber;
+    square.classList.add("empty-square");
     
     grid.appendChild(square);
     
@@ -50,6 +51,8 @@ function createEnemy() {
     
     // Set the background image of the selected square to the tank SVG
     selectedSquare.style.backgroundImage = "url(\"styles/pictures/red tank.svg\")";
+    selectedSquare.classList.remove("empty-square");
+    selectedSquare.classList.add("enemy-button");
 }
 
 function createMe() {
@@ -66,12 +69,13 @@ function createMe() {
     
     // Select the square at the random index
     const selectedSquare = document.querySelector(`#square${randomNumber}`);
-    const dialog2 = document.querySelector("[dialog-me]");
+    const dialog2 = document.querySelector(".dialog-me");
     
     // Set the background image of the selected square to the tank SVG
     selectedSquare.style.backgroundImage = "url(\"styles/pictures/green tank.svg\")";
     selectedSquare.appendChild(dialog2);
-    selectedSquare.setAttribute('show-button', '');
+    selectedSquare.classList.remove("empty-square");
+    selectedSquare.classList.add("me-button");
     me = selectedSquare;
     dialog = dialog2;
 }

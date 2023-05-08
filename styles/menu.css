@@ -1,0 +1,21 @@
+dialog {
+    text-align: center;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    top: -150%;
+    left: -50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #5b6eacb9;
+    z-index: 9999;
+}
+dialog *{
+    background-color: #5b6eacb9;
+  }
+button#move-button{
+    border: 2px solid #343541;
+    border-radius: 10px;
+    height: 50px;
+    margin: 1px;
+}

@@ -30,34 +30,29 @@ body{
     width: 50px;
     height: 50px;
     background-image: url("pictures/grid.svg");
-}
-[showbutton]{
-    z-index: 300;
+    background-color: transparent;
 }
 button {
     appearance: none;
     border: none;
-    transition: all 0.3s;
+    transition: all 1s;
     z-index: 1;
 }
-button:hover {
-    background-color: #ffffff7c;
-    box-shadow: 0 0 15px 5px #ffffff;
+button:hover.square {
+    transform: translateY(-5px);
     z-index: 2;
+    transition: all 0.3s;
 }
-dialog {
-    position: relative;
-    border: none;
-    border-radius: 10px;
-    top: -100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #5b6eac;
-    z-index: 300;
-  }
-  dialog *{
-    background-color: #5b6eac;
-  }
+.me-button{
+    z-index: 3;
+    box-shadow: 0 0 15px 0 #08fc24;
+    border-radius: 33%;
+}
+.enemy-button{
+    box-shadow: 0 0 15px 0 #f04434;
+    overflow: hidden;
+    border-radius: 33%;
+}
 a {
     color: cyan;
     transition: all 0.3s;
