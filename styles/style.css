@@ -3,6 +3,7 @@
     color:#d7d8da;
     background-color:#343541;
     font-family: 'Roboto', sans-serif;
+    z-index: 0;
 }
 body{
     width: auto;
@@ -30,9 +31,19 @@ body{
     height: 50px;
     background-image: url("pictures/grid.svg");
 }
+[showbutton]{
+    z-index: 300;
+}
 button {
     appearance: none;
     border: none;
+    transition: all 0.3s;
+    z-index: 1;
+}
+button:hover {
+    background-color: #ffffff7c;
+    box-shadow: 0 0 15px 5px #ffffff;
+    z-index: 2;
 }
 dialog {
     position: relative;
@@ -42,13 +53,15 @@ dialog {
     margin-left: auto;
     margin-right: auto;
     background-color: #5b6eac;
+    z-index: 300;
   }
   dialog *{
     background-color: #5b6eac;
   }
 a {
-    color: lightcyan;
+    color: cyan;
+    transition: all 0.3s;
 }
 a:hover {
-    color: lightsteelblue;
+    color: darkcyan;
 }
