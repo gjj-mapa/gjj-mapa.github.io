@@ -1,1 +1,1 @@
-import me from "grid tonk.js";
+import {meSpace, enemySpaces} from "grid tonk.js";

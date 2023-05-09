@@ -38,7 +38,8 @@ button {
     transition: all 1s;
     z-index: 1;
 }
-button:hover.square {
+button:hover.square,
+dialog.dialog-me button:hover {
     transform: translateY(-5px);
     z-index: 2;
     transition: all 0.3s;

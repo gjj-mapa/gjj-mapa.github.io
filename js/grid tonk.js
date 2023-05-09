@@ -2,11 +2,10 @@ const grid = document.querySelector('.grid');
 const rowcolumncount = 15;
 let counter = 1;
 let occupiedSquares = [];
-let meSpace = 0;
-let me = null;
-let dialogState = "hidden";
-let dialog = null;
-let enemySpaces = [];
+export let meSpace = 0;
+export let me = null;
+export let dialog = null;
+export let enemySpaces = [];
 
 for (let i = 0; i < rowcolumncount*rowcolumncount; i++) {
     const square = document.createElement("button");
@@ -45,6 +44,7 @@ function createEnemy() {
     
     // Mark the square as occupied
     occupiedSquares.push(randomNumber);
+    enemySpaces.push(randomNumber);
     
     // Select the square at the random index
     const selectedSquare = document.querySelector(`#square${randomNumber}`);
@@ -63,9 +63,9 @@ function createMe() {
     while (occupiedSquares.includes(randomNumber)) {
         randomNumber = Math.floor(Math.random() * rowcolumncount * rowcolumncount) + 1;
     }
-    
     // Mark the square as occupied
     occupiedSquares.push(randomNumber);
+    meSpace = randomNumber;
     
     // Select the square at the random index
     const selectedSquare = document.querySelector(`#square${randomNumber}`);
@@ -79,15 +79,4 @@ function createMe() {
     me = selectedSquare;
     dialog = dialog2;
 }
-me.addEventListener("click", () => {
-    if (dialogState == "hidden") {
-        dialog.show();
-        dialogState = "shown";
-    }
-    else {
-        dialog.close();
-        dialogState = "hidden";
-    }
-})
-
 

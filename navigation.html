@@ -8,20 +8,41 @@
   <body class="body">
     <div class="grid"></div>
     <dialog class="dialog-me">
-      <button id="move-button">
-        Hello World!
-      </button>
-      <button id="move-button">
-        Hello Milky Way!
-      </button>
-      <button id="move-button">
-        Hello Andromeda!
-      </button>
-      <button id="move-button">
-        Hello Space!
-      </button>
+      <form method="dialog">
+        <table>
+          <tr>
+            <td>
+              <button class="move-button">
+                Move
+              </button>
+            </td>
+            <td>
+              <button class="shoot-button">
+                Shoot
+              </button>
+            </td>
+            <td>
+              <button class="add-hp-button">
+                Add HP
+              </button>
+            </td>
+            <td>
+              <button class="add-range-button">
+               Add range
+              </button>
+            </td>
+            <td>
+              <button class="close-menu-button">
+                Close
+              </button>
+            </td>
+          </tr>
+        </table>
+      </form>
     </dialog>
-    <script src="js/grid tonk.js"></script>
-    <script src="js/mobile manager.js"></script>
+    <script type="module" src="js/grid tonk.js"></script>
+    <script type="module" src="js/dialog handlerer.js"></script>
+    <script>
+    </script>
     </body>
 </html>

@@ -3,19 +3,25 @@ dialog {
     position: relative;
     border: none;
     border-radius: 10px;
-    top: -150%;
-    left: -50%;
+    top: -250%;
+    left: -450%;
     margin-left: auto;
     margin-right: auto;
     background-color: #5b6eacb9;
     z-index: 9999;
 }
 dialog *{
-    background-color: #5b6eacb9;
+    background-color: #5b6eac00;
   }
-button#move-button{
+dialog.dialog-me button{
     border: 2px solid #343541;
     border-radius: 10px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     margin: 1px;
+    scale: 1;
+}
+form {
+    padding: 0;
+    margin: 0;
 }
