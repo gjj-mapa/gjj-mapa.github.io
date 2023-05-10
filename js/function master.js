@@ -1,3 +1,6 @@
+import {resetMe} from "./grid tonk.js";
+import { removeMovers } from "./move man.js";
+
 export function getMovers(number, rownum) {
     let numbers = new Array(8);
     if(number%15 == 1){
@@ -39,4 +42,21 @@ export function getMovers(number, rownum) {
         }
     }
     return numbers;
+  }
+  
+  export function modifyMoverButtons(button, toDelete, newNumber){
+    if (!toDelete) {
+        button.addEventListener("click", () => {
+            removeMovers();
+            resetMe(newNumber);
+            modifyMoverButtons(button, true, newNumber);
+        })
+    }
+    else {
+        button.addEventListener("click", () => {
+            removeMovers();
+            resetMe(newNumber);
+            modifyMoverButtons(button, true, newNumber);
+        })
+    }
   }

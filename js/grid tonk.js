@@ -59,6 +59,7 @@ function createEnemy() {
     selectedSquare.classList.add("enemy-button");
 }
 
+
 function createMe() {
     // Generate a random index between 1 and the number of squares in the grid
     let randomNumber = Math.floor(Math.random() * rowcolumncount * rowcolumncount) + 1;
@@ -83,4 +84,37 @@ function createMe() {
     me = selectedSquare;
     dialog = dialog2;
 }
+
+export function resetMe(number) {
+    
+    // Select the square at the random index
+    const oldSquare = document.querySelector(`#square${meSpace}`);
+    
+    // Set the background image of the selected square to the tank SVG
+    oldSquare.style.remove;
+    oldSquare.classList.add("empty-square");
+    oldSquare.classList.remove("me-button");
+    occupiedSquares.remove(meSpace);
+    meSpace = number;
+    occupiedSquares.push(number);
+        
+    // Select the square at the random index
+    const selectedSquare = document.querySelector(`#square${number}`);
+    const dialog2 = document.querySelector(".dialog-me");
+
+    selectedSquare.style.backgroundImage = "url(\"styles/pictures/green tank.svg\")";
+    selectedSquare.appendChild(dialog2);
+    selectedSquare.classList.remove("empty-square");
+    selectedSquare.classList.add("me-button");
+    me = selectedSquare;
+    dialog = dialog2;
+    
+}
+Array.prototype.remove = function(element) {
+    const index = this.indexOf(element);
+    if (index !== -1) {
+      this.splice(index, 1);
+    }
+    return this;
+  };
 
