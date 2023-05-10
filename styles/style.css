@@ -30,12 +30,16 @@ body{
     width: 50px;
     height: 50px;
     background-image: url("pictures/grid.svg");
+    background-size: 50px 50px;
     background-color: transparent;
 }
-button {
+dialog.dialog-me button,
+button.square {
     appearance: none;
     border: none;
     transition: all 1s;
+}
+button.square:not(.me-button) {
     z-index: 1;
 }
 button:hover.square,
@@ -44,7 +48,7 @@ dialog.dialog-me button:hover {
     z-index: 2;
     transition: all 0.3s;
 }
-.me-button{
+button.me-button{
     z-index: 3;
     box-shadow: 0 0 15px 0 #08fc24;
     border-radius: 33%;

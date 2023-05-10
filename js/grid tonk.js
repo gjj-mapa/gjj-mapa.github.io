@@ -1,5 +1,5 @@
 const grid = document.querySelector('.grid');
-const rowcolumncount = 15;
+export const rowcolumncount = 15;
 let counter = 1;
 let occupiedSquares = [];
 export let meSpace = 0;
