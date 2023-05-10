@@ -1,7 +1,5 @@
 import {me} from "./grid tonk.js";
 let dialog = document.querySelector(".dialog-me");
-let viewportHeight;
-let isOffScreen;
 
 me.addEventListener("click", () => {
     dialog.show();

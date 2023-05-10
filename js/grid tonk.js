@@ -33,6 +33,10 @@ for (let i = 0; i < 7; i++) {
 
 createMe();
 
+// ===================================================================================================================================
+// ============================GOING BEYOND THIS POINT WILL CAUSE NAUSEA==============================================================
+// ===================================================================================================================================
+
 function createEnemy() {
     // Generate a random index between 1 and the number of squares in the grid
     let randomNumber = Math.floor(Math.random() * rowcolumncount * rowcolumncount) + 1;
