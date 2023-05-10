@@ -8,11 +8,9 @@ moveButton.addEventListener("click", () => {
         const sleSquare = document.querySelector(`#square${square}`);
         if (move && !enemySpaces.includes(square)) {
             sleSquare.classList.add("mover");
-            console.log(move +" is true")
         }
         else if (!move && !enemySpaces.includes(square)) {
             sleSquare.classList.remove("mover");
-            console.log(move +" is not true")
         }
         
     }
