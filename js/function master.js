@@ -35,7 +35,8 @@ export function getMovers(number, rownum) {
         if (numbers[i] <= 0) {
             numbers[i] = null;
         }
-        else {
+        else if (numbers[i] >= 226) {
+            numbers[i] = null;
         }
     }
     return numbers;
