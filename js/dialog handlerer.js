@@ -1,7 +1,8 @@
-import {me} from "./grid tonk.js";
+import {meSpace} from "./grid tonk.js";
+const me = document.querySelector(`#square${meSpace}`);
 let dialog = document.querySelector(".dialog-me");
 
-me.addEventListener("click", () => {
+/*me.addEventListener("click", () => {
     dialog.show();
     let viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
@@ -15,4 +16,4 @@ me.addEventListener("click", () => {
       }
       //console.log(isOffScreen + " because "+ dialog.getBoundingClientRect().top + "<0px or " + dialog.getBoundingClientRect().top + ">"+viewportHeight)
 })
-
+*/

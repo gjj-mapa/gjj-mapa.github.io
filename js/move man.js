@@ -1,16 +1,21 @@
-import {meSpace, enemySpaces, rowcolumncount} from "./grid tonk.js";
+import {meSpace, enemySpaces, rowcolumncount, buildGrid, changeMeSpace} from "./grid tonk.js";
 import { getMovers } from "./function master.js";
 const moveButton = document.querySelector(".move-button");
-let move = true;
+export let move = true;
 
 moveButton.addEventListener("click", () => {
     let squares = getMovers(meSpace, rowcolumncount);
     for (let square of squares) {
         if (square != null) {
-            console.log(square + " is the one!");
-            const sleSquare = document.querySelector(`#square${square}`);
+            let sleSquare = document.querySelector(`#square${square}`);
             if (move && !enemySpaces.includes(square)) {
                 sleSquare.classList.add("mover");
+                sleSquare.addEventListener("click", () => {
+                    if (!move) {
+                        changeMeSpace(square);
+                        buildGrid();
+                    }
+                });
             }
             else if (!move && !enemySpaces.includes(square)) {
                 sleSquare.classList.remove("mover");
@@ -22,3 +27,6 @@ moveButton.addEventListener("click", () => {
     move = !move;
     
 })
+export function removeMove(){
+    move = true;
+}
