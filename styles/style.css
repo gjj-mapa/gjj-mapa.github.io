@@ -1,95 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 :root {
-    --background-color: #f9f9f9; /* default light mode background color */
-    --text-color: #000000; /* default light mode text color */
-    --button-color: #2196f3; /* default light mode button color */
+  --background-color: #f9f9f9; /* default light mode background color */
+  --text-color: #000000; /* default light mode text color */
+  --button-color: #2196f3; /* default light mode button color */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #343541;
+    --text-color: #d7d8da;
+    --button-color: #4caf50;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background-color: #343541;
-      --text-color: #d7d8da;
-      --button-color: #4caf50; 
-    }
-  }
+}
 
-*{
-    /*color:#d7d8da;
+* {
+  /*color:#d7d8da;
     background-color:#343541;*/
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
-    z-index: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  z-index: 0;
 }
-html{
-    color-scheme: light dark;
+html {
+  color-scheme: light dark;
 }
-body{
-    width: auto;
-    height: auto;
-    pointer-events: all;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-    overflow-y: hidden; 
-    overflow-x: hidden;
-    font-size: 1.125rem;
-    line-height: 1.5;
+body {
+  width: auto;
+  height: auto;
+  pointer-events: all;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 img,
 svg,
 video {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 a {
-    color: cyan;
-    transition: all 0.3s;
+  color: cyan;
+  transition: all 0.3s;
 }
 a:hover {
-    color: darkcyan;
+  color: darkcyan;
 }
 /* TONK STYLE: */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(15, 50px);
-    grid-template-rows: repeat(15, 50px);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transform-origin: center center;
+  display: grid;
+  grid-template-columns: repeat(15, 50px);
+  grid-template-rows: repeat(15, 50px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center center;
 }
-  
-  .square {
-    width: 50px;
-    height: 50px;
-    background-image: url("pictures/grid.svg");
-    background-size: 50px 50px;
-    background-color: transparent;
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-image: url('pictures/grid.svg');
+  background-size: 50px 50px;
+  background-color: transparent;
 }
 dialog.dialog-me button,
 button.square {
-    appearance: none;
-    border: none;
-    transition: all 1s;
+  appearance: none;
+  border: none;
+  transition: all 1s;
 }
 button.square:not(.me-button) {
-    z-index: 1;
+  z-index: 1;
 }
 button:hover.square,
 dialog.dialog-me button:hover {
-    transform: translateY(-5px);
-    z-index: 2;
-    transition: all 0.3s;
+  transform: translateY(-5px);
+  z-index: 2;
+  transition: all 0.3s;
 }
-button.me-button{
-    z-index: 3;
-    box-shadow: 0 0 15px 0 #08fc24;
-    border-radius: 33%;
+button.me-button {
+  z-index: 3;
+  box-shadow: 0 0 15px 0 #08fc24;
+  border-radius: 33%;
 }
-.enemy-button{
-    box-shadow: 0 0 15px 0 #f04434;
-    overflow: hidden;
-    border-radius: 33%;
+.enemy-button {
+  box-shadow: 0 0 15px 0 #f04434;
+  overflow: hidden;
+  border-radius: 33%;
 }
-

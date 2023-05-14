@@ -1,37 +1,40 @@
-
 main {
-    width: min(100ch, 100% - 4rem);
-    margin-inline: auto;
-    overflow-y: auto;
-    margin-top: 2rem;
-    min-width: 240px;
+  width: min(100ch, 100% - 4rem);
+  margin-inline: auto;
+  overflow-y: auto;
+  margin-top: 2rem;
+  min-width: 240px;
 }
-h1, p, a{
-    width: 100%;
-    margin: 0.3rem auto;
-    text-align: center;
+h1,
+p,
+a {
+  width: 100%;
+  margin: 0.3rem auto;
+  text-align: center;
 }
 h1 {
-    font-size: 8rem;
+  font-size: 8rem;
 }
-p, a {
-    font-size: 1.5rem;
+p,
+a {
+  font-size: 1.5rem;
 }
 @media (max-width: 870px) {
-    h1 {
-        font-size: 6rem;
-    }
+  h1 {
+    font-size: 6rem;
+  }
 }
 @media (max-width: 672px) {
-    h1{
-        font-size: 4rem;
-    }
-    p, a {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 4rem;
+  }
+  p,
+  a {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 475px) {
-    h1{
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 }

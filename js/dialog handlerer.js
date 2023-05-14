@@ -1,6 +1,11 @@
-import {meSpace} from "./grid tonk.js";
+import { meSpace } from './grid tonk.js';
 const me = document.querySelector(`#square${meSpace}`);
-let dialog = document.querySelector(".dialog-me");
+let dialog = document.querySelector('.dialog-me');
+
+const html = document.querySelector('html');
+const body = document.querySelector('body');
+html.style = 'overflow: visible;';
+body.style = 'overflow: visible;';
 
 /*me.addEventListener("click", () => {
     dialog.show();

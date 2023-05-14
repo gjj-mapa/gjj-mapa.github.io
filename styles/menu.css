@@ -1,27 +1,27 @@
 dialog {
-    text-align: center;
-    position: relative;
-    border: none;
-    border-radius: 10px;
-    top: -250%;
-    left: -450%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #5b6eacb9;
-    z-index: 9999;
+  text-align: center;
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  top: -250%;
+  left: -450%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #5b6eacb9;
+  z-index: 9999;
 }
-dialog *{
-    background-color: #5b6eac00;
-  }
-dialog.dialog-me button{
-    border: 2px solid #343541;
-    border-radius: 10px;
-    width: 75px;
-    height: 75px;
-    margin: 1px;
-    scale: 1;
+dialog * {
+  background-color: #5b6eac00;
+}
+dialog.dialog-me button {
+  border: 2px solid #343541;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  margin: 1px;
+  scale: 1;
 }
 form {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
