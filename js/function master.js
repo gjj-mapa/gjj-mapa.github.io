@@ -29,3 +29,42 @@ export function getMovers(number, rownum) {
   }
   return numbers;
 }
+export function getRangers(center, rownum, range = 0) {
+  const gridSize = rownum * rownum;
+  const result = new Array(gridSize).fill('x');
+
+  const centerRow = Math.floor(center / rownum);
+  const centerCol = center % rownum;
+
+  for (let i = -range; i <= range; i++) {
+    for (let j = -range; j <= range; j++) {
+      const row = centerRow + i;
+      const col = centerCol + j;
+      const index = row * rownum + col;
+
+      if (
+        row < 0 ||
+        row >= rownum ||
+        col < 0 ||
+        col >= rownum ||
+        index === center
+      ) {
+        continue; // Skip out-of-bounds and center
+      }
+
+      result[index] = 'o';
+    }
+  }
+
+  // Remove edges
+  for (let i = 0; i < gridSize; i++) {
+    const row = Math.floor(i / rownum);
+    const col = i % rownum;
+
+    if (row === 0 || row === rownum - 1 || col === 0 || col === rownum - 1) {
+      result[i] = 'y';
+    }
+  }
+
+  return result;
+}
