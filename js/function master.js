@@ -1,4 +1,4 @@
-export function getMovers(number, rownum) {
+export function getRangeOne(number, rownum) {
   let numbers = new Array(9);
   numbers[0] = number - rownum - 1;
   numbers[1] = number - rownum;

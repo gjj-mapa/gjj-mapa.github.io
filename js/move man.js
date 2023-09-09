@@ -5,12 +5,12 @@ import {
   buildGrid,
   changeMeSpace,
 } from './grid tonk.js';
-import { getMovers } from './function master.js';
+import { getRangeOne } from './function master.js';
 const moveButton = document.querySelector('.move-button');
 export let move = true;
 
 moveButton.addEventListener('click', () => {
-  let squares = getMovers(meSpace, rowcolumncount);
+  let squares = getRangeOne(meSpace, rowcolumncount);
   for (let square of squares) {
     if (square != null) {
       let sleSquare = document.querySelector(`#square${square}`);
