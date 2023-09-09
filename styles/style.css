@@ -67,7 +67,7 @@ a:hover {
   background-size: 50px 50px;
   background-color: transparent;
 }
-dialog.dialog-me button,
+dialog button,
 button.square {
   appearance: none;
   border: none;
@@ -77,7 +77,7 @@ button.square:not(.me-button) {
   z-index: 1;
 }
 button:hover.square,
-dialog.dialog-me button:hover {
+dialog button:hover {
   transform: translateY(-5px);
   z-index: 2;
   transition: all 0.3s;

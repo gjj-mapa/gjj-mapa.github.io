@@ -1,19 +1,21 @@
 dialog {
   text-align: center;
-  position: relative;
   border: none;
   border-radius: 10px;
+  background-color: #5b6eacb9;
+}
+dialog.dialog-me {
+  position: relative;
+  z-index: 9999;
   top: -250%;
-  left: -450%;
+  left: -300%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #5b6eacb9;
-  z-index: 9999;
 }
 dialog * {
   background-color: #5b6eac00;
 }
-dialog.dialog-me button {
+dialog button {
   border: 2px solid #343541;
   border-radius: 10px;
   width: 75px;
