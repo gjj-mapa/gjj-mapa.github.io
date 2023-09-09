@@ -2,11 +2,11 @@ button.mover {
   background-image: url(pictures/green\ dot.svg);
   background-size: 50px 50px;
 }
-button.ranger_close {
+button.ranger-close {
   background-image: url(pictures/red\ dot.svg);
   background-size: 50px 50px;
 }
-button.ranger_far {
+button.ranger-far {
   background-image: url(pictures/orange\ dot.svg);
   background-size: 50px 50px;
 }

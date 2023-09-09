@@ -7,6 +7,7 @@ export let meSpace = null;
 export let me = null;
 export let dialog = null;
 export let enemySpaces = [];
+export let range = 2;
 
 buildGrid();
 
