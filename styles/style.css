@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 :root {
-  --background-color: #f9f9f9; /* default light mode background color */
+  --background-color: #d7d8da; /* default light mode background color */
   --text-color: #000000; /* default light mode text color */
   --button-color: #2196f3; /* default light mode button color */
 }
